@@ -9,11 +9,11 @@ class Task < Post
   end
 
   def read_from_console
-    puts "Что Вам необходимо сделать?"
+    puts 'Что Вам необходимо сделать?'
     @text = STDIN.gets.chomp
 
-    puts "До какого числа Вам нужно это сделать"
-    puts "Укажите дату в формате ДД.ММ.ГГГГ, например 12.05.2022"
+    puts 'До какого числа Вам нужно это сделать'
+    puts 'Укажите дату в формате ДД.ММ.ГГГГ, например 12.05.2022'
     input = STDIN.gets.chomp
     @due_date = Date.parse(input)
   end
@@ -27,7 +27,7 @@ class Task < Post
     file.puts(@text)
 
     file.close
-    puts "Ваша задача сохранена"
+    puts 'Ваша задача сохранена'
   end
 
 end

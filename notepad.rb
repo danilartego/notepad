@@ -13,8 +13,8 @@ require_relative 'memo.rb'
 require_relative 'link.rb'
 require_relative 'task.rb'
 
-puts "Привет, я твой блокнот!"
-puts "Что хотите записать в блокнот?"
+puts 'Привет, я твой блокнот!'
+puts 'Что хотите записать в блокнот?'
 
 choices = Post.post_types
 
@@ -32,4 +32,4 @@ entry = Post.create(choice)
 entry.read_from_console
 entry.save
 
-puts "Ваша запись сохранена!"
+puts 'Ваша запись сохранена в файл!'

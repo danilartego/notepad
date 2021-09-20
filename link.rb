@@ -7,15 +7,15 @@ class Link < Post
   end
 
   def read_from_console
-    puts "Введите адрес ссылки"
+    puts 'Введите адрес ссылки'
     @url = STDIN.gets.chomp
 
-    puts "Напишите пару слов о том, куда ведет эта ссылка"
+    puts 'Напишите пару слов о том, куда ведет эта ссылка'
     @text = STDIN.gets.chomp
   end
 
   def save
-    file = File.new(file_path, "w:UTF-8")
+    file = File.new(file_path, 'w:UTF-8')
     time_string = @created_at.strftime("%Y.%m.%d, %H:%M")
     file.puts(time_string + "\n\r")
 
@@ -23,5 +23,6 @@ class Link < Post
     file.puts(@text)
 
     file.close
+    puts 'Ваша ссылка сохранена'
   end
 end

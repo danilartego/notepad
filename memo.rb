@@ -1,10 +1,10 @@
 class Memo < Post
 
   def read_from_console
-    puts "Я сохраню все, что ты напишешь до строчки \"end\" в файл."
+    puts 'Я сохраню все, что ты напишешь до строчки \"end\" в файл.'
     line = nil
 
-    while line != "end" do
+    while line != 'end' do
       line = STDIN.gets.chomp
       @text << line
     end
@@ -12,7 +12,7 @@ class Memo < Post
   end
 
   def save
-    file = File.new(file_path, "w:UTF-8")
+    file = File.new(file_path, 'w:UTF-8')
 
     time_string = @created_at.strftime("%Y.%m.%d, %H:%M")
     file.puts(time_string + "\n\r")
@@ -22,7 +22,7 @@ class Memo < Post
     end
 
     file.close
-    puts "Ваша запись сохранена"
+    puts 'Ваша запись сохранена'
   end
 
 end
